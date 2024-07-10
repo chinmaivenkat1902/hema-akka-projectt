@@ -49,23 +49,9 @@ def index():
         alldetails = Details.query.all()
         return render_template('index.html', alldetails=alldetails)
 
-# Second route: contact
-@app.route('/contact')
-def contact():
-    
 
 
-
-    # Returning the response
-    return render_template('contact.html')
-
-# Third route: about us
-@app.route('/about')
-def about():
-    # Returning the response
-    return render_template('about.html')
-
-# Fourth route: delete a detail from database
+# second  route: delete a detail from database
 @app.route("/delete")
 def delete():
     # Extracting the id
@@ -86,7 +72,7 @@ def delete():
     # Redirect to index page
     return redirect('/')
 
-# Fifth route: update a detail from database
+# third route: update a detail from database
 @app.route("/update", methods=["GET", "POST"])
 def update():
     # Getting the id for update
